@@ -11,6 +11,13 @@ function ColorList() {
   const colorElements = colors.map((color) => {
     return <li style={{ color: color }}>{color}</li>;
   });
+  const colorElements2 = colors.map((color) => {
+    return (
+      <li key={color} style={{ color: color }}>
+        {color}
+      </li>
+    );
+  });
 
   return (
     <div>
@@ -25,6 +32,9 @@ function ColorList() {
       <ol>
       {colorElements}
       </ol>
+      <ul>
+        {colorElements2}
+      </ul>
     </div>
   );
 }
